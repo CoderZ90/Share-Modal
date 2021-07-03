@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,700;1,800;1,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+body {
+  min-height: 100vh;
+  background: #7134eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+::selection {
+  background: #7134eb;
+  color: #fff;
+}
+.openBtn {
+  background: #222;
+  border: none;
+  outline: none;
+  padding: 30px 100px;
+  font-size: 30px;
+  color: #fff;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+.openBtn.btnHide {
+  opacity: 0;
+  pointer-events: none;
+  display: none;
+}
+.modal {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  max-width: 420px;
+  width: 100%;
+  /* Javascript Toggler CSS */
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.modal.visible {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top header {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #373737;
+}
+.cross {
+  width: 50px;
+  height: 50px;
+  background-color: #f2f1f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #a5a4aa;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.cross:hover {
+  background-color: #7134eb;
+  color: #fff;
+}
+.line {
+  margin-top: 15px;
+  background-color: #f2f1f9;
+  height: 2px;
+  width: 100%;
+}
+.main {
+  margin-top: 15px;
+}
+.main h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #373737;
+}
+.icon {
+  margin: 22px 0;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+.iconBox {
+  border: 1px solid #777;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+.iconBox:hover {
+  background: #7134eb;
+  color: #fff;
+  border: 1px solid #7134eb;
+}
+.fab {
+  font-size: 18px;
+}
+.facebook {
+    border: 1px solid #2680ff;
+    color: #266bff;
+}
+.insta {
+    border: 1px solid #e305af;
+    color: #e305af;
+}
+.twitter {
+    border: 1px solid #40b9ff;
+    color: #40b9ff;
+}
+.whatsapp {
+    border: 1px solid #05e331;
+    color: #05e331;
+}
+.plane {
+    border: 1px solid #0088cc;
+    color: #0088cc;
+}
+.footer p {
+  font-size: 1.2rem;
+  color: #373737;
+}
+.inputBox {
+  position: relative;
+  display: flex;
+}
+.searchBar {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  background: none;
+  outline: none;
+  padding-left: 40px;
+  border: 2px solid #f2f1f9;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.linkIcon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-10%);
+  margin-left: 14px;
+  color: #777;
+  font-size: 1.2rem;
+}
+.footer button {
+  position: absolute;
+  right: 2%;
+  top: 50%;
+  transform: translateY(-27%);
+  width: 25%;
+  height: 65%
+  outline: none;
+  border: none;
+  padding: 5px;
+  background: #7134eb;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
+}

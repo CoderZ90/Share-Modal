@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Coding By Aditya - youtube.com/CodingFire -->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Popup Link Modal Using Javascript</title>
+  </head>
+  <body>
+    <button class="openBtn">Share Modal</button>
+    <div class="modal">
+      <div class="top">
+        <header>Share Modal</header>
+        <div class="cross"><i class="fas fa-times"></i></div>
+      </div>
+      <div class="line"></div>
+      <div class="main">
+        <h3>Share this link via</h3>
+        <div class="icon">
+          <div class="iconBox facebook">
+            <i class="fab fa-facebook-f"></i>
+          </div>
+          <div class="iconBox insta">
+            <i class="fab fa-instagram"></i>
+          </div>
+          <div class="iconBox twitter">
+            <i class="fab fa-twitter"></i>
+          </div>
+          <div class="iconBox whatsapp">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="iconBox plane">
+            <i class="fab fa-telegram-plane"></i>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <p>Or copy link</p>
+        <div class="inputBox">
+          <input type="text" class="searchBar" value="example.com/share-link" placeholder="example.com/share-link">
+          <i class="fas fa-link linkIcon"></i>
+          <button class="copyBtn">Copy</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const modal = document.querySelector('.modal'),
+      openBtn = document.querySelector('.openBtn'),
+      crossBtn = document.querySelector('.cross'),
+      searchBar = document.querySelector('.searchBar'),
+      copyBtn = document.querySelector('.copyBtn');
+      openBtn.addEventListener('click', () => {
+        modal.classList.add('visible');
+        openBtn.classList.add('btnHide');
+      })
+      crossBtn.addEventListener('click', () => {
+        modal.classList.remove('visible');
+        openBtn.classList.remove('btnHide');
+      })
+      copyBtn.onclick = function() {
+        searchBar.select();
+        document.execCommand('copy');
+      }
+    </script>
+
+  </body>
+</html>
